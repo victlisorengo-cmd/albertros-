@@ -1,0 +1,393 @@
+:root {
+  color-scheme: light;
+  --bg: #f8fbff;
+  --surface: #ffffff;
+  --surface-strong: #eef3fb;
+  --text: #102a43;
+  --muted: #4a6173;
+  --accent: #2f6bff;
+  --accent-soft: #e8efff;
+  --border: rgba(16, 42, 67, 0.12);
+  --shadow: 0 24px 80px rgba(15, 40, 73, 0.08);
+  --radius: 24px;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f7faff 0%, #eef4fb 100%);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(16, 42, 67, 0.08);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 0;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.4vw, 2.6rem);
+}
+
+.brand p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero {
+  padding: 4rem 0 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  margin-top: 0;
+  font-size: clamp(2.7rem, 4vw, 4rem);
+  line-height: 1.05;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 620px;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: none;
+  padding: 0.95rem 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 20px 40px rgba(47, 107, 255, 0.18);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(16, 42, 67, 0.12);
+}
+
+.hero-card {
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-card__item {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 1.15rem;
+  background: var(--surface-strong);
+  border-radius: 18px;
+}
+
+.hero-card__item strong {
+  font-size: 1.4rem;
+}
+
+.jobs-section,
+.post-section,
+.about-section {
+  padding: 3.5rem 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+}
+
+.filter-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-row label,
+.job-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.filter-row select,
+.job-form input,
+.job-form select,
+.job-form textarea {
+  width: 240px;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(16, 42, 67, 0.14);
+  border-radius: 16px;
+  font: inherit;
+  background: white;
+}
+
+.jobs-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.empty-state {
+  font-size: 1rem;
+  color: var(--muted);
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+}
+
+.job-card {
+  padding: 1.75rem;
+  background: var(--surface);
+  border-radius: 28px;
+  border: 1px solid rgba(16, 42, 67, 0.08);
+  box-shadow: 0 18px 40px rgba(15, 40, 73, 0.06);
+}
+
+.job-card header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.job-card h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.job-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.job-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: -0.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.job-contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.job-card p {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 380px);
+  gap: 2rem;
+}
+
+.job-form {
+  display: grid;
+  gap: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.job-form input,
+.job-form textarea,
+.job-form select {
+  width: 100%;
+}
+
+.job-form button {
+  width: fit-content;
+}
+
+.form-note {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.post-preview {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.post-preview h3 {
+  margin-top: 0;
+}
+
+.post-preview ul {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.feature-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1.5rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.site-footer {
+  padding: 2rem 0 3rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 940px) {
+  .hero-grid,
+  .post-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-row select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-header,
+  .hero,
+  .jobs-section,
+  .post-section,
+  .about-section,
+  .site-footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .jobs-grid {
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+  }
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Albertros Jobs helps teams and talent connect through remote, part-time, contract, and project-based job listings in a clean, modern experience." />
+    <meta name="keywords" content="remote jobs, part-time jobs, contract roles, flexible work, hiring marketplace" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.albertros.com/" />
+    <meta property="og:title" content="Albertros Jobs | Flexible remote, part-time, contract roles" />
+    <meta property="og:description" content="Find or post flexible job opportunities for remote, contract, part-time, and freelance work." />
+    <meta property="og:url" content="https://www.albertros.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Albertros Jobs | Flexible remote, part-time, contract roles" />
+    <meta name="twitter:description" content="Find or post flexible job opportunities for remote, contract, part-time, and freelance work." />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Albertros Jobs",
+        "url": "https://www.albertros.com/",
+        "description": "A site for browsing and posting flexible remote, part-time, contract, and freelance jobs.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.albertros.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <h1>Albertros</h1>
+          <p>Flexible jobs that fit your life.</p>
+        </div>
+        <nav class="nav-links">
+          <a href="#browse">Browse Jobs</a>
+          <a href="#post">Post a Job</a>
+          <a href="#about">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Professional. Friendly. Flexible.</p>
+          <h2>Find flexible work or hire exceptional talent fast.</h2>
+          <p>
+            Albertros helps teams connect with remote, part-time, contract, and
+            project-based opportunities in a clean, modern experience.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#browse">Browse Jobs</a>
+            <a class="button button-secondary" href="#post">Post a Job</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card__item">
+            <strong>500+</strong>
+            <span>roles posted</span>
+          </div>
+          <div class="hero-card__item">
+            <strong>4.9/5</strong>
+            <span>community rating</span>
+          </div>
+          <div class="hero-card__item">
+            <strong>Flexible</strong>
+            <span>remote, contract, part-time</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="browse" class="section jobs-section">
+        <div class="container section-header">
+          <div>
+            <p class="eyebrow">Browse roles</p>
+            <h2>Search friendly, flexible jobs by category.</h2>
+          </div>
+          <div class="filter-row">
+            <label>
+              Location
+              <select id="filter-location">
+                <option value="all">Any</option>
+                <option value="Remote">Remote</option>
+                <option value="Americas">Americas</option>
+                <option value="Europe">Europe</option>
+                <option value="Asia">Asia</option>
+              </select>
+            </label>
+            <label>
+              Type
+              <select id="filter-type">
+                <option value="all">Any</option>
+                <option value="Full-time">Full-time</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Contract">Contract</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="container jobs-grid" id="job-list"></div>
+      </section>
+
+      <section id="post" class="section post-section">
+        <div class="container section-header">
+          <div>
+            <p class="eyebrow">Post a job</p>
+            <h2>Share your opportunity with motivated candidates.</h2>
+          </div>
+        </div>
+        <div class="container post-grid">
+          <form id="job-form" class="job-form">
+            <label>
+              Job Title
+              <input type="text" id="job-title" placeholder="e.g. Product Designer" required />
+            </label>
+            <label>
+              Company
+              <input type="text" id="job-company" placeholder="e.g. Aurora Labs" required />
+            </label>
+            <label>
+              Location
+              <input type="text" id="job-location" placeholder="Remote, Europe, Americas" required />
+            </label>
+            <label>
+              Type
+              <select id="job-type" required>
+                <option value="Full-time">Full-time</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Contract">Contract</option>
+                <option value="Freelance">Freelance</option>
+              </select>
+            </label>
+            <label>
+              Contact email
+              <input type="email" id="job-email" placeholder="hiring@company.com" required />
+            </label>
+            <label>
+              Contact phone
+              <input type="tel" id="job-phone" placeholder="+1 555 123 4567" required />
+            </label>
+            <label>
+              Description
+              <textarea id="job-description" rows="5" placeholder="Brief role overview and expectations" required></textarea>
+            </label>
+            <button type="submit" class="button button-primary">Post Job</button>
+            <p class="form-note">Jobs are stored in your browser database so listings persist across visits.</p>
+          </form>
+
+          <div class="post-preview">
+            <h3>Why Albertros?</h3>
+            <p>
+              Albertros is designed for teams and talent who want a respectful,
+              simple hiring process. Keep roles flexible, avoid noise, and
+              attract professionals who value balance.
+            </p>
+            <ul>
+              <li>Clear role details</li>
+              <li>Simple posting flow</li>
+              <li>Responsive browsing experience</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow">About Albertros</p>
+            <h2>A welcoming space for flexible work and modern hiring.</h2>
+            <p>
+              Albertros brings together curated opportunities and thoughtful teams.
+              Every listing is built to help talented professionals find work that
+              adapts to their schedule and goals.
+            </p>
+          </div>
+          <div class="feature-cards">
+            <article class="feature-card">
+              <h4>Professional</h4>
+              <p>Clean listings and clear communication for every job seeker.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Friendly</h4>
+              <p>Designed to feel approachable and welcoming to all applicants.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Flexible</h4>
+              <p>Support for remote, part-time, contract, and project-based work.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Albertros. Built for flexible work.</p>
+        <p>Need help? Email hello@albertros.com or call +1 555 987 6543.</p>
+    <script src="script.js"></script>
+  </body>
+</html>
